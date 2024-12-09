@@ -21,7 +21,10 @@ else:
         st.warning("No frequent itemsets generated. Please try with a lower min_support.")
 
     # Generate association rules from frequent itemsets
-    rules =  None
+    if not frequent_itemsets.empty:
+        rules = association_rules(frequent_itemsets, metric="confidence", min_threshold=0.1)
+    else:
+        rules = pd.DataFrame()
 
     # Displaying the association rules if they exist
     if not rules.empty:
