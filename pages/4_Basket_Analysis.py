@@ -21,7 +21,7 @@ else:
         st.warning("No frequent itemsets generated. Please try with a lower min_support.")
 
     # Generate association rules from frequent itemsets
-    rules = association_rules(frequent_itemsets, metric="lift", min_threshold=0.3)
+    rules = association_rules(frequent_itemsets, metric="lift", min_threshold=0.3,num_itemsets=final_df.shape[0])
 
     # Displaying the association rules if they exist
     if not rules.empty:
