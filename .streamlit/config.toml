@@ -1,0 +1,11 @@
+[server]
+
+maxMessageSize = 1000
+fileWatcherType = "none"
+
+[theme]
+primaryColor = "#4CAF50"  # Green for buttons and accents
+backgroundColor = "#FAFAFA"  # Light gray background
+secondaryBackgroundColor = "#FFFFFF"  # White panel background
+textColor = "#333333"  # Dark gray text color
+font = "sans serif"  # Font type
